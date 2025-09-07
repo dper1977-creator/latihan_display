@@ -56,3 +56,11 @@ img {
     height: 500px;
     background-color: rgb(101, 102, 99);
     float: right;
+}
+.abstract {
+    font-family: "Times New Roman", serif;
+    font-size: 11pt;
+    line-height: 1;
+    text-align: justify;
+    text-indent: 0;
+}

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <title>Layout Index</title>
+  <style>
+    body {
+      margin: 0;
+      background: #ddd;
+      font-family: Arial, sans-serif;
+    }
+    .a4 {
+      width: 794px;   /* ukuran A4 px */
+      height: 1120px; /* proporsional A4 */
+      margin: auto;
+      background: #254166;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      display: flexbox;
+      flex-direction: column;
+    }
+
+    /* HEADER */
+    .header {
+      background: linear-gradient(180deg, #6fa0c9, #000000, #6fa0c9);
+      padding: 15px 30px;
+      overflow: hidden;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      color: #6fa0c9;
+      font-family: 'Franklin Gothic Medium', Arial, sans-serif;
+      font-size: 22px;
+      font-weight: bold;
+    }
+    .menu a {
+      color: white;
+      text-decoration: none;
+      margin-left: 25px;
+      font-size: 18px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    .menu a:hover {
+      text-shadow: 0 0 15px #2bff01b4, 0 0 30px #6fa0c9;
+    }
+    .menu {
+      display: flex;
+      align-items: center;
+    }
+
+    /* RUNNING TEXT */
+    .marquee {
+      overflow: hidden;
+      white-space: nowrap;
+      box-sizing: border-box;
+      margin: 20px 0;
+      border-top: 2px solid #6fa0c9;
+      border-bottom: 2px solid #6fa0c9;
+      background: #1a2a4a;
+      padding: 10px 0;
+    }
+    .marquee-content {
+      display: inline-block;
+      padding-left: 100%;
+      animation: marquee 15s linear infinite;
+      font-size: 20px;
+      font-weight: bold;
+      color: white;
+      font-family: "OCR A Std", monospace;
+    }
+    @keyframes marquee {
+      0%   { transform: translate(0, 0); }
+      100% { transform: translate(-100%, 0); }
+    }
+
+    /* BOXES */
+    .boxes {
+      margin: 15px;
+      overflow: hidden; /* clearfix manual */
+      display: flex;
+      justify-content: space-between;
+      gap: 1%;
+    }
+    .box {
+      flex: 20 5 20%;
+      height: 250px;
+      border: 5px solid #a0b0be;
+      box-sizing: border-box;
+      overflow: hidden;
+      background: none;
+      border-radius: 8px;
+    }
+    .box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      border-radius: 4px;
+    }
+
+    /* HERO SECTION */
+    .cat {
+      position: static;
+      margin:83px 10px 80px 10px;
+      flex-grow: 5;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+    }
+    .cat img {
+      width: 100%;
+      height: 500px;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* FOOTER */
+    .footer {
+      background: linear-gradient(#000000, #6fa0c9, #000000);
+      color: white;
+      text-align: center;
+      font-size: 14px;
+      padding: 10px 0;
+      width: 100%;
+      box-sizing: border-box;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.5)
+    }
+  </style>
+</head>
+<body>
+  <div class="a4">
+    <!-- HEADER -->
+    <div class="header">
+      <div class="logo">Dylan</div>
+      <nav class="menu">
+        <a href="beranda.HTML">Beranda</a>
+        <a href="cv dp.html">Profile</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+
+    <!-- RUNNING TEXT -->
+    <div class="marquee">
+      <div class="marquee-content">
+        "Carilah Pintu-pintu Rizki Yang Halal &amp; Ridho Alloh"
+      </div>
+    </div>
+
+    <!-- 4 BOX -->
+    <div class="boxes">
+      <div class="box"><img src="/montir.jpg" alt="Montir" /></div>
+      <div class="box"><img src="/pedagang.jpg" alt="Pedagang" /></div>
+      <div class="box"><img src="/parlmn1.jpg" alt="Parlmn1" /></div>
+      <div class="box"><img src="/sales.jpg" alt="Sales" /></div>
+    </div>
+
+    <!-- CAT GAMBAR -->
+    <div class="cat">
+      <img src="/html css_.jpg" alt="Cat" />
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">
+      &copy; 2025 Dylan.
+    </div>
+  </div>
+</body>
+</html>
